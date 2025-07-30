@@ -1,7 +1,7 @@
 """Health monitoring service for G1 glasses"""
-from typing import Callable, List
 import asyncio
-import time
+from typing import Callable, List
+
 
 class HealthMonitor:
     def __init__(self, connector):

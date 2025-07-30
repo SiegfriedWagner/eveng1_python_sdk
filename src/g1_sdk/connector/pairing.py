@@ -2,9 +2,10 @@
 Pairing and device management for G1 glasses
 """
 import asyncio
-from typing import Optional, Dict
+from typing import Dict
+
 from bleak import BleakScanner, BleakClient
-from utils.constants import EventCategories
+
 
 class PairingManager:
     """Handles device pairing and management"""

@@ -2,9 +2,10 @@
 Display service implementation for G1 glasses
 """
 import asyncio
-from bleak import BleakClient
 from typing import List, Optional
-from utils.logger import setup_logger
+
+from g1_sdk.utils.logger import setup_logger
+
 
 class DisplayService:
     """Handles text and image display"""
@@ -66,7 +67,7 @@ class DisplayService:
             raise ValueError("Text cannot be empty")
         return True
 
-    async def send_text_sequential(self, text: str, hold_time: Optional[int] = None, show_exit: bool = True):
+    async def send_text_sequential(self, text: str, hold_time: Optional[int] = None, show_exit: bool = False):
         """Send text to both glasses in sequence with acknowledgment"""
         # Keep existing connection checks
         if not self.connector.left_client.is_connected or not self.connector.right_client.is_connected:

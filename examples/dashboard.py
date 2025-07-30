@@ -1,21 +1,22 @@
 """Dashboard example for G1 glasses"""
 import asyncio
-from rich.live import Live
-from rich.table import Table
+import logging
+import time
+from collections import deque
+
+from rich.box import ROUNDED
 from rich.console import Console
 from rich.layout import Layout
+from rich.live import Live
 from rich.panel import Panel
-from rich.logging import RichHandler
-from collections import deque
-import logging
-from connector import G1Connector
-from utils.constants import (
-    UUIDS, COMMANDS, EventCategories, StateEvent, 
-    ConnectionState, StateColors, StateDisplay
+from rich.table import Table
+
+from g1_sdk.connector import G1Connector
+from g1_sdk.utils.constants import (
+    StateEvent,
+    StateColors, StateDisplay
 )
-import time
-from rich.box import ROUNDED
-from utils.logger import set_dashboard_mode
+
 
 class LogPanel:
     """Panel to display recent log messages"""

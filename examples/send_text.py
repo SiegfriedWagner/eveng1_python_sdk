@@ -2,8 +2,8 @@
 Example of sending text to G1 glasses
 """
 import asyncio
-from connector import G1Connector
-from utils.logger import setup_logger
+from g1_sdk.connector import G1Connector
+from g1_sdk.utils.logger import setup_logger
 
 async def main():
     """Test sequence with different text display methods"""

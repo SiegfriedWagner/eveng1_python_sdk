@@ -2,13 +2,12 @@
 Event handling service for G1 glasses
 Provides high-level event orchestration and subscription management
 """
-import asyncio
 from dataclasses import dataclass, field
-from typing import Callable, Dict, List, Optional, Any
 from time import time
+from typing import Dict, Optional, Any
 
-from utils.constants import StateEvent, EventCategories, COMMANDS
-from utils.logger import user_guidance
+from g1_sdk.utils.constants import StateEvent, COMMANDS
+
 
 @dataclass
 class EventContext:

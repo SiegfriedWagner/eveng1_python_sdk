@@ -8,3 +8,11 @@ g1_connector.log
 *.egg-info/
 *.egg
 *.pyc
+
+# Jetbrains IDE files
+.idea
+
+# uv relevant files
+.python-version
+## uv lock is removed from library projects
+uv.lock

@@ -1,30 +1,21 @@
 """
 Base connector class for G1 glasses
 """
-from rich.console import Console
-from rich.live import Live
-from rich.table import Table
-import os
 import time
-import logging
-import asyncio
 from dataclasses import dataclass
 from typing import Optional
-from bleak import BleakClient
 
-from connector.bluetooth import BLEManager
-from connector.pairing import PairingManager
-from connector.commands import CommandManager
-from services.state import StateManager
-from services.uart import UARTService
-from services.events import EventService
-from services.status import StatusManager
-from services.health import HealthMonitor
-from utils.logger import setup_logger
-from utils.config import Config
-from utils.constants import UUIDS, COMMANDS, StateEvent, EventCategories
-from services.device import DeviceManager
-from services.display import DisplayService
+from bleak import BleakClient
+from rich.console import Console
+from rich.table import Table
+
+from g1_sdk.connector.pairing import PairingManager
+from g1_sdk.services.display import DisplayService
+from g1_sdk.services.health import HealthMonitor
+from g1_sdk.utils.config import Config
+from g1_sdk.utils.constants import EventCategories
+from g1_sdk.utils.logger import setup_logger
+
 
 @dataclass
 class G1Config:
@@ -74,12 +65,12 @@ class G1Connector:
         
     def _initialize_services(self):
         """Initialize services in correct order"""
-        from connector.bluetooth import BLEManager
-        from connector.commands import CommandManager
-        from services.events import EventService
-        from services.uart import UARTService
-        from services.device import DeviceManager
-        from services.state import StateManager
+        from g1_sdk.connector.bluetooth import BLEManager
+        from g1_sdk.connector.commands import CommandManager
+        from g1_sdk.services.events import EventService
+        from g1_sdk.services.uart import UARTService
+        from g1_sdk.services.device import DeviceManager
+        from g1_sdk.services.state import StateManager
         
         # Core services first
         self.state_manager = StateManager(self)

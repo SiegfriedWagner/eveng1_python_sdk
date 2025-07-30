@@ -1,8 +1,9 @@
 """State management service for G1 glasses"""
-from typing import Optional, List, Callable
-import asyncio
 import time
-from utils.constants import ConnectionState, StateEvent, EventCategories, COMMANDS, StateColors
+from typing import List, Callable
+
+from g1_sdk.utils.constants import ConnectionState, StateEvent, COMMANDS, StateColors
+
 
 class StateManager:
     """Manages state for G1 glasses"""

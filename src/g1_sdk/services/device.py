@@ -3,7 +3,7 @@ Device management service for G1 glasses
 if battery status is available, add that here too
 """
 
-from utils.constants import COMMANDS, EventCategories
+from g1_sdk.utils.constants import COMMANDS, EventCategories
 
 class DeviceManager:
     """Handles device-wide states and controls"""

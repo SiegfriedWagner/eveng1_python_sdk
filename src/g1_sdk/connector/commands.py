@@ -3,9 +3,12 @@ Command handling for G1 glasses
 """
 import asyncio
 import time
-from typing import Dict, Any, Optional, Tuple
+from typing import Any, Optional, Tuple
+
 from bleak import BleakClient
-from utils.constants import UUIDS, COMMANDS, EventCategories
+
+from g1_sdk.utils.constants import UUIDS, COMMANDS, EventCategories
+
 
 class CommandManager:
     """Manages command queuing and execution"""

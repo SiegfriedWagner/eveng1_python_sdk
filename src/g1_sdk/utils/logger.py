@@ -1,11 +1,12 @@
 """Logging utilities for G1 glasses SDK"""
-import os
 import logging
-import sys
+import os
+from typing import Optional
+
 from rich.console import Console
 from rich.logging import RichHandler
-from typing import Optional
-from utils.config import Config
+
+from g1_sdk.utils.config import Config
 
 # Global console instance
 _console: Optional[Console] = None

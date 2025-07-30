@@ -22,7 +22,7 @@ Required packages:
 
 Simple connection example:
 ```python
-from connector import G1Connector
+from g1_sdk.connector import G1Connector
 import asyncio
 
 async def main():
@@ -167,6 +167,7 @@ Supporting utilities:
      ```python
      for attempt in range(self.connector.config.reconnect_attempts):
          # Connection attempt logic
+         ...
      ```
 
 2. **Connection Maintenance**
@@ -193,7 +194,7 @@ Supporting utilities:
 Basic connection demonstration
 
 ```bash
-python -m examples.simple_connect
+python examples/simple_connect.py
 ```
 
 #### Monitor State Changes
@@ -201,7 +202,7 @@ python -m examples.simple_connect
 Monitor and log device interactions
 
 ```bash
-python -m examples.interactions
+python examples/interactions.py
 ```
 
 #### Dashboard
@@ -209,7 +210,7 @@ python -m examples.interactions
 Monitor statuses and logs
 
 ```bash
-python -m examples.dashboard
+python examples/dashboard.py
 ```
 
 ### Display Features
@@ -219,7 +220,7 @@ python -m examples.dashboard
 Text display with multi-line support
 
 ```bash
-python -m examples.send_text
+python examples/send_text.py
 ```
 
 #### PowerPoint Display (In progress)
@@ -227,7 +228,7 @@ python -m examples.send_text
 Send speaker notes from an active PowerPoint presentation to the glasses
 
 ```bash
-python -m examples.ppt_teleprompter
+python examples/ppt_teleprompter.py
 ```
 
 #### Image Display
@@ -235,7 +236,7 @@ python -m examples.ppt_teleprompter
 Image transmission (1-bit, 576x136 BMP) 
 
 ```bash
-python -m examples.send_image
+python examples/send_image.py
 ```
 
 ### Advanced Features
@@ -245,7 +246,7 @@ python -m examples.send_image
 Audio recording demonstration
 
 ```bash
-python -m examples.microphone
+python examples/microphone.py
 ```
 
 #### Even AI
@@ -253,7 +254,7 @@ python -m examples.microphone
 Even AI integration example 
 
 ```bash
-python -m examples.even_ai
+python examples/even_ai.py
 ```
 
 ## Protocol Details

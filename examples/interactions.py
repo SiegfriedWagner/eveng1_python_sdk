@@ -1,15 +1,17 @@
 """Example showing G1 glasses state changes and interactions"""
 import asyncio
 import logging
-from datetime import datetime
-from connector import G1Connector
-from utils.constants import (
-    StateEvent, EventCategories, StateColors, 
-    StateDisplay, ConnectionState
-)
-from utils.logger import setup_logger
-from rich.console import Console
 import re
+from datetime import datetime
+
+from rich.console import Console
+
+from g1_sdk.connector import G1Connector
+from g1_sdk.utils.constants import (
+    StateEvent, EventCategories, StateColors
+)
+from g1_sdk.utils.logger import setup_logger
+
 
 class InteractionLogger:
     def __init__(self):

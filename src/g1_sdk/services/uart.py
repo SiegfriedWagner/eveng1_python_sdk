@@ -1,9 +1,12 @@
 """UART service for G1 glasses"""
 import asyncio
-from typing import Optional, Dict, Any, Callable
-from bleak import BleakClient
-from utils.constants import UUIDS, EventCategories
 import time
+from typing import Callable
+
+from bleak import BleakClient
+
+from g1_sdk.utils.constants import UUIDS, EventCategories
+
 
 class UARTService:
     """Handles UART communication with G1 glasses"""

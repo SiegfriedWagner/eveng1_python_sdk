@@ -1,11 +1,12 @@
 """Status display service for G1 glasses"""
 import asyncio
 import time
-from rich.table import Table
-from rich.live import Live
-from rich.text import Text
 
-from utils.constants import StateEvent, EventCategories
+from rich.live import Live
+from rich.table import Table
+
+from g1_sdk.utils.constants import StateEvent
+
 
 class StatusManager:
     """Manages status display and dashboard"""

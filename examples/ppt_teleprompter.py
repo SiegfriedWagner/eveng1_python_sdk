@@ -3,9 +3,8 @@ PowerPoint teleprompter example for G1 glasses
 Displays speaker notes from active PowerPoint presentation
 """
 import asyncio
-import sys
-from connector import G1Connector
-from utils.logger import setup_logger
+from g1_sdk.connector import G1Connector
+from g1_sdk.utils.logger import setup_logger
 
 
 print("Script starting...")

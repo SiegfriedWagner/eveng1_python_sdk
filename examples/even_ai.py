@@ -68,9 +68,8 @@ Description: The actual data being transmitted in this package.
 
 """
 
-import asyncio
-from connector import G1Connector
-from services import AudioService
+from g1_sdk.connector import G1Connector
+from g1_sdk.services import AudioService
 
 async def main():
     glasses = G1Connector()

@@ -7,12 +7,12 @@ from bleak import BleakClient, BleakScanner
 from typing import Optional
 from rich.table import Table
 
-from utils.constants import (
+from g1_sdk.utils.constants import (
     UUIDS, COMMANDS, EventCategories, StateEvent, 
     StateColors, StateDisplay, ConnectionState
 )
-from utils.logger import user_guidance
-from connector.pairing import PairingManager
+from g1_sdk.utils.logger import user_guidance
+from g1_sdk.connector.pairing import PairingManager
 
 class BLEManager:
     """Manages BLE connections for G1 glasses"""
