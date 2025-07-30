@@ -9,14 +9,11 @@ Requirements:
 - Bluetooth LE support
 
 ```bash
-pip install -r requirements.txt
+pip install .
 ```
 
 
-Required packages:
-- bleak>=0.21.1: Bluetooth LE communication
-- rich>=13.7.0: Enhanced console output
-- asyncio>=3.4.3: Asynchronous I/O support
+All required packages are listed in [pyproject.toml](./pyproject.toml).
 
 ## Quick Start
 
